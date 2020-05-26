@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+
+.Button6 {
+    position: relative;
+    border: none;
+    margin: 5px;
+    background-color: transparent;
+    color: $brown;
+    size: 1.2rem;
+    min-width: 160px;
+    min-height: 40px;
+    border: 1px solid $green;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        border-radius: 3px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        z-index: -1;
+        transition: all 300ms ease-in;
+        background: $primaryColor;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+            width: 100%;
+        }
+    }
+}

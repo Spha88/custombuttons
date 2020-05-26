@@ -1,0 +1,18 @@
+@import './variables.scss';
+
+.App {
+    width: 80vw;
+    margin: 0 auto;
+    height: 100vh;
+    text-align: center;
+    padding: 1rem 0;
+    font-family: 'Manrope', sans-serif;
+    h1 {
+        font-family: 'Pacifico', cursive;
+        font-size: 3rem;
+        color: $primaryColor;
+    }
+    div {
+        margin: 1rem;
+    }
+}

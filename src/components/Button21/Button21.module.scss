@@ -1,0 +1,52 @@
+@import '../../variables.scss';
+
+.Button21 {
+    position: relative;
+    border: none;
+    margin: 1rem;
+    background-color: transparent;
+    color: $brown;
+    size: 1.2rem;
+    min-width: 160px;
+    min-height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        border: 1px solid $green;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        z-index: -1;
+        transition: all 500ms ease-in;
+    }
+    &:hover {
+        &:before {
+            animation: rock 300ms 1;
+        }
+    }
+}
+@keyframes rock {
+    0% {
+        width: 100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+    }
+    50% {
+        width: 120%;
+        height: 120%;
+        right: -10%;
+        top: -10%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+    }
+}
