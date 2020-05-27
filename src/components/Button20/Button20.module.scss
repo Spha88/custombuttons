@@ -29,6 +29,9 @@
             animation: rock 300ms 1;
         }
     }
+    &:focus {
+        outline: 0;
+    }
 }
 @keyframes rock {
     0% {

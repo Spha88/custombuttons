@@ -24,22 +24,24 @@
         width: 100%;
         z-index: -1;
         transition: all 300ms ease-in;
+        background: $primaryColor;
     }
     &:before {
         top: 0;
-        background: $primaryColor;
     }
     &:after {
         bottom: 0;
-        background: $primaryColor;
     }
     &:hover {
         color: #fff;
         &:before {
-            height: 100%;
+            height: 50%;
         }
         &:after {
-            height: 100%;
+            height: 50%;
         }
+    }
+    &:focus {
+        outline: 0;
     }
 }
