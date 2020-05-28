@@ -14,26 +14,33 @@
     min-height: 40px;
     font-weight: bold;
     cursor: pointer;
-    &:before {
+    transition: all 1000ms ease-in;
+    overflow: hidden;
+    &:before,
+    &:after {
         content: '';
         display: block;
         position: absolute;
-        bottom: 0;
-        right: 0;
+        top: 0;
         width: 0;
-        height: 0;
+        height: 100%;
         border-radius: 3px;
+        transform: skewX(45deg);
         background-color: $primaryColor;
         z-index: -1;
-        transition: all 300ms ease-in;
+        transition: all 500ms ease-in;
+    }
+    &:before {
+        left: -20%;
+    }
+    &:after {
+        right: -20%;
     }
     &:hover {
         color: #fff;
-        &:before {
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
+        &:before,
+        &:after {
+            width: 75%;
         }
     }
     &:focus {

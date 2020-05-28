@@ -1,0 +1,57 @@
+@import '../../variables.scss';
+
+.Button {
+    position: relative;
+    border: 1px solid $green;
+    background-color: transparent;
+    margin: 5px;
+    padding: 5px 20px;
+    color: $brown;
+    font-family: inherit;
+    border-radius: 3px;
+    size: 1.2rem;
+    min-width: 160px;
+    min-height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 1000ms ease-in;
+    overflow: hidden;
+    &:focus {
+        outline: 0;
+    }
+    &:before,
+    &:after {
+        display: block;
+        position: absolute;
+        height: 100%;
+        border-radius: 3px;
+        content: 'Button 51';
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 300ms ease-in;
+    }
+    &:before {
+        height: 100%;
+        width: 100%;
+        top: -100%;
+        left: 0;
+        color: #fff;
+        background-color: $primaryColor;
+    }
+    &:after {
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    &:hover {
+        &:before {
+            top: 0%;
+        }
+        &:after {
+            bottom: -100%;
+        }
+    }
+}
