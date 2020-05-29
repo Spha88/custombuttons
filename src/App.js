@@ -20,6 +20,7 @@ import { Button42 } from './components/Button42/Button42';
 import { Button50 } from './components/Button50/Button50';
 import { Button51 } from './components/Button51/Button51';
 import { Button52 } from './components/Button52/Button52';
+import Footer from './components/Footer/Footer';
 
 function App() {
     return (
@@ -57,6 +58,7 @@ function App() {
                 <Button51 label='Button 51' />
                 <Button52 label='Button 52' />
             </div>
+            <Footer />
         </div>
     );
 }

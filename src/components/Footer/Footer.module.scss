@@ -1,0 +1,21 @@
+@import '../../variables.scss';
+
+.Footer {
+    background: $primaryColor;
+    color: #fff;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    a {
+        color: #fff;
+        text-decoration: none;
+        &:focus,
+        &:visited,
+        &:hover {
+            color: #fff;
+        }
+    }
+}
